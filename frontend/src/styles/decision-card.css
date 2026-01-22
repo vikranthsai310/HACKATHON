@@ -1,0 +1,405 @@
+/**
+ * DecisionCard Component Styles
+ */
+
+.decision-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  animation: slideIn 0.3s ease-out;
+  border-left: 4px solid #667eea;
+}
+
+.decision-card.success {
+  border-left-color: #22c55e;
+}
+
+.decision-card.denied {
+  border-left-color: #ef4444;
+}
+
+.decision-card.partial {
+  border-left-color: #f59e0b;
+}
+
+.decision-card.pending {
+  border-left-color: #6366f1;
+}
+
+/* Header */
+.decision-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  background: #f8fafc;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.decision-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.status-icon {
+  font-size: 1.25rem;
+}
+
+.status-label {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #334155;
+}
+
+.risk-badge {
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.risk-badge.risk-low {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.risk-badge.risk-medium {
+  background: #fef9c3;
+  color: #854d0e;
+}
+
+.risk-badge.risk-high {
+  background: #fed7aa;
+  color: #c2410c;
+}
+
+.risk-badge.risk-critical {
+  background: #fecaca;
+  color: #b91c1c;
+}
+
+.decision-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.decision-id {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.75rem;
+  color: #64748b;
+  background: #f1f5f9;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.decision-time {
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+/* Summary */
+.decision-summary {
+  padding: 16px 20px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.decision-summary p {
+  margin: 0;
+  color: #475569;
+  line-height: 1.6;
+}
+
+/* Confidence */
+.decision-confidence {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 20px;
+  background: #fafafa;
+}
+
+.confidence-label {
+  font-size: 0.875rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.confidence-bar {
+  flex: 1;
+  height: 8px;
+  background: #e2e8f0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.confidence-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  border-radius: 4px;
+  transition: width 0.5s ease-out;
+}
+
+.confidence-value {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #667eea;
+  min-width: 45px;
+  text-align: right;
+}
+
+/* Actions */
+.decision-actions {
+  padding: 16px 20px;
+}
+
+.decision-actions h4 {
+  margin: 0 0 12px 0;
+  font-size: 0.875rem;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.action-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.action-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  background: #f8fafc;
+  border-radius: 8px;
+  font-size: 0.875rem;
+}
+
+.action-item.success {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+}
+
+.action-item.failed {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+}
+
+.action-icon {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+.action-item.success .action-icon {
+  color: #22c55e;
+}
+
+.action-item.failed .action-icon {
+  color: #ef4444;
+}
+
+.action-name {
+  flex: 1;
+  font-weight: 500;
+  color: #334155;
+}
+
+.action-status {
+  font-size: 0.75rem;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: #e2e8f0;
+  color: #64748b;
+}
+
+.action-item.success .action-status {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.action-item.failed .action-status {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.no-actions {
+  color: #94a3b8;
+  font-style: italic;
+  padding: 8px 0;
+}
+
+/* Expand Button */
+.expand-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: #f8fafc;
+  color: #667eea;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  border-top: 1px solid #e2e8f0;
+}
+
+.expand-btn:hover {
+  background: #f1f5f9;
+}
+
+/* Details */
+.decision-details {
+  padding: 16px 20px;
+  background: #fafafa;
+  border-top: 1px solid #e2e8f0;
+}
+
+.detail-section {
+  margin-bottom: 20px;
+}
+
+.detail-section h4 {
+  margin: 0 0 12px 0;
+  font-size: 0.875rem;
+  color: #334155;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.explanation-text {
+  margin: 0;
+  padding: 12px;
+  background: white;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  color: #475569;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  font-family: inherit;
+  border: 1px solid #e2e8f0;
+}
+
+.loading {
+  color: #94a3b8;
+  font-style: italic;
+}
+
+/* HRM Trace */
+.hrm-trace {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.hrm-level {
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  overflow: hidden;
+}
+
+.level-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  background: #f8fafc;
+  border-bottom: 1px solid #e2e8f0;
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: #334155;
+}
+
+.level-icon {
+  font-size: 1rem;
+}
+
+.level-content {
+  padding: 12px;
+}
+
+.level-content p {
+  margin: 0 0 4px 0;
+  font-size: 0.875rem;
+  color: #475569;
+}
+
+.level-content p:last-child {
+  margin-bottom: 0;
+}
+
+.level-content strong {
+  color: #334155;
+}
+
+/* Audit Trail */
+.audit-toggle {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 12px;
+  border: 1px dashed #cbd5e1;
+  border-radius: 8px;
+  background: transparent;
+  color: #64748b;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.audit-toggle:hover {
+  background: #f8fafc;
+  border-color: #94a3b8;
+}
+
+.audit-trail {
+  margin-top: 12px;
+  padding: 12px;
+  background: #1e293b;
+  border-radius: 8px;
+  overflow-x: auto;
+}
+
+.audit-trail pre {
+  margin: 0;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.75rem;
+  color: #e2e8f0;
+  white-space: pre-wrap;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .decision-header {
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+  
+  .decision-meta {
+    align-self: flex-end;
+  }
+  
+  .decision-confidence {
+    flex-wrap: wrap;
+  }
+  
+  .confidence-bar {
+    order: 3;
+    width: 100%;
+    margin-top: 8px;
+  }
+}

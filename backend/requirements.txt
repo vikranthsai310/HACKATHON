@@ -1,0 +1,63 @@
+# HRM Decision System Backend - Python Dependencies
+
+# ==========================================
+# CORE FRAMEWORK
+# ==========================================
+fastapi==0.109.0
+uvicorn[standard]==0.27.0
+pydantic==2.5.3
+pydantic-settings==2.1.0
+
+# ==========================================
+# LLM & AI
+# ==========================================
+google-generativeai==0.3.2
+openai==1.10.0  # Optional: for OpenAI GPT integration
+
+# ==========================================
+# NLP & TEXT PROCESSING
+# ==========================================
+nltk==3.8.1
+spacy==3.7.2
+python-dateutil==2.8.2
+
+# ==========================================
+# DEEP LEARNING (for HRM model)
+# ==========================================
+torch>=2.0.0
+numpy>=1.24.0
+packaging
+ninja
+wheel
+setuptools
+setuptools-scm
+
+# ==========================================
+# API & WEB
+# ==========================================
+httpx==0.26.0
+requests==2.31.0
+python-multipart==0.0.6
+
+# ==========================================
+# UTILITIES
+# ==========================================
+python-dotenv==1.0.0
+pyyaml==6.0.1
+python-json-logger==2.0.7
+
+# ==========================================
+# TESTING & DEVELOPMENT
+# ==========================================
+pytest==7.4.4
+pytest-asyncio==0.21.1
+pytest-cov==4.1.0
+black==24.1.1
+flake8==7.0.0
+mypy==1.8.0
+
+# ==========================================
+# MONITORING & LOGGING
+# ==========================================
+loguru==0.7.2
+prometheus-client==0.19.0

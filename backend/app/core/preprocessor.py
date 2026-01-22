@@ -148,6 +148,7 @@ class NLPPreprocessor:
         result = {
             "original": text,
             "normalized": normalized,
+            "normalized_text": normalized,  # Alias for compatibility
             "cleaned": cleaned,
             "time_references": time_refs,
             "tags": tags,
@@ -167,6 +168,7 @@ class NLPPreprocessor:
         return {
             "original": "",
             "normalized": "",
+            "normalized_text": "",  # Alias for compatibility
             "cleaned": "",
             "time_references": {},
             "tags": [],
