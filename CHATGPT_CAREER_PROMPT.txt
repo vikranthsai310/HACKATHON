@@ -1,0 +1,674 @@
+═══════════════════════════════════════════════════════════════════════════════
+COMPREHENSIVE CAREER ANALYSIS CHALLENGE - FOR CHATGPT
+═══════════════════════════════════════════════════════════════════════════════
+
+I need you to analyze 50 different career options for me and recommend the best 5 choices based on my complete profile. This is a complex multi-dimensional decision requiring analysis of skills, finances, market trends, personality fit, and future sustainability.
+
+═══════════════════════════════════════════════════════════════════════════════
+MY COMPLETE PROFILE
+═══════════════════════════════════════════════════════════════════════════════
+
+BASIC INFO:
+• Age: 16 years old
+• Current Education: 10th Grade Completed
+• Location: India
+• Financial Support: Family support 80%, Initial investment capacity: ₹50,000
+
+TECHNICAL SKILLS (0-100 scale):
+• Coding: 75
+• Python: 70
+• Web Development: 65
+• Mobile Development: 50
+• Data Analysis: 55
+• AI/ML: 45
+• Cloud Computing: 40
+• Cybersecurity: 50
+• Database Management: 60
+• DevOps: 35
+
+CREATIVE SKILLS (0-100 scale):
+• Dancing: 70
+• Singing: 65
+• Video Editing: 60
+• Graphic Design: 55
+• Content Writing: 70
+• Photography: 50
+• Animation: 45
+• Music Production: 50
+• Acting: 55
+• Digital Art: 60
+
+SOFT SKILLS (0-100 scale):
+• Communication: 60
+• Leadership: 55
+• Teamwork: 70
+• Problem Solving: 75
+• Creativity: 80
+• Time Management: 60
+• Adaptability: 70
+• Critical Thinking: 75
+• Emotional Intelligence: 65
+• Negotiation: 50
+
+DOMAIN KNOWLEDGE (0-100 scale):
+• Business: 45
+• Marketing: 50
+• Finance: 40
+• Education: 60
+• Healthcare: 30
+• Entertainment: 70
+• Sports: 55
+• Science: 60
+• Social Media: 75
+• E-commerce: 55
+
+PERSONALITY TRAITS (0-100 scale):
+• Extroversion: 65
+• Conscientiousness: 70
+• Openness to Experience: 80
+• Agreeableness: 60
+• Emotional Stability: 65
+• Risk Tolerance: 70
+• Innovation Mindset: 75
+• Persistence: 70
+
+WORK PREFERENCES:
+• Work Environment: Hybrid (Remote + Office mix)
+• Work Hours: Flexible schedule preferred
+• Team Size: Medium teams (5-15 people)
+• Travel Willingness: 60% (moderate)
+• Job Security Importance: 65%
+• Salary Importance: 75%
+• Growth Potential Importance: 85%
+• Work-Life Balance Importance: 70%
+• Passion vs Money Balance: 60% (slightly favor passion)
+
+FINANCIAL GOALS:
+• 5-Year Salary Target: ₹8,00,000 per year (₹8 LPA)
+• 10-Year Salary Target: ₹20,00,000 per year (₹20 LPA)
+• Desired Lifestyle: Upper Middle Class
+• Retirement Age Target: 50 years
+• Entrepreneurship Interest: 70%
+• Social Impact Desire: 60%
+
+CONSTRAINTS:
+• Maximum Education Time: 4 years
+• Initial Investment Capacity: ₹50,000
+• Family Support Level: 80%
+• Financial Pressure to Earn Soon: 60%
+• Location Mobility: 70%
+
+═══════════════════════════════════════════════════════════════════════════════
+50 CAREER OPTIONS TO ANALYZE
+═══════════════════════════════════════════════════════════════════════════════
+
+TIER 1: HIGH-TECH CAREERS
+
+1. Full Stack Developer
+   - Required: coding, web_development, database_management
+   - Min Education: 12th, Preferred: B.Tech
+   - Salary: Entry ₹3.5L → 5yr ₹12L → 10yr ₹25L
+   - Market Demand: 95%, Competition: 90%, Success Rate: 85%
+   - Remote Friendly: 95%, Freelance: 85%, Job Security: 80%
+   - Learning Curve: Medium, Time to Proficiency: 2-3 years
+   - Initial Investment: ₹50,000
+   - AI Automation Risk: 30%, Future Proof: 85%, Industry Growth: 15%/year
+
+2. Data Scientist
+   - Required: coding, data_analysis, ai_ml, python
+   - Min Education: 12th, Preferred: B.Tech/M.Tech
+   - Salary: Entry ₹6L → 5yr ₹20L → 10yr ₹45L
+   - Market Demand: 98%, Competition: 95%, Success Rate: 75%
+   - Remote Friendly: 90%, Freelance: 70%, Job Security: 90%
+   - Learning Curve: Steep, Time to Proficiency: 3-4 years
+   - Initial Investment: ₹1,00,000
+   - AI Automation Risk: 20%, Future Proof: 95%, Industry Growth: 25%/year
+
+3. Mobile App Developer (iOS/Android)
+   - Required: coding, mobile_dev
+   - Min Education: 12th, Preferred: B.Tech
+   - Salary: Entry ₹4L → 5yr ₹14L → 10yr ₹28L
+   - Market Demand: 90%, Competition: 85%, Success Rate: 80%
+   - Remote Friendly: 90%, Freelance: 90%, Job Security: 75%
+   - Learning Curve: Medium, Time to Proficiency: 2-3 years
+   - Initial Investment: ₹60,000
+   - AI Automation Risk: 25%, Future Proof: 85%, Industry Growth: 18%/year
+
+4. Cloud Architect (AWS/Azure/GCP)
+   - Required: coding, cloud_computing, devops
+   - Min Education: B.Tech, Preferred: B.Tech + Certifications
+   - Salary: Entry ₹8L → 5yr ₹25L → 10yr ₹50L
+   - Market Demand: 95%, Competition: 80%, Success Rate: 70%
+   - Remote Friendly: 85%, Freelance: 60%, Job Security: 85%
+   - Learning Curve: Steep, Time to Proficiency: 4-5 years
+   - Initial Investment: ₹80,000
+   - AI Automation Risk: 15%, Future Proof: 95%, Industry Growth: 22%/year
+
+5. Cybersecurity Specialist
+   - Required: coding, cybersecurity, problem_solving
+   - Min Education: 12th, Preferred: B.Tech + CEH
+   - Salary: Entry ₹5L → 5yr ₹18L → 10yr ₹35L
+   - Market Demand: 98%, Competition: 75%, Success Rate: 75%
+   - Remote Friendly: 80%, Freelance: 75%, Job Security: 95%
+   - Learning Curve: Steep, Time to Proficiency: 3-4 years
+   - Initial Investment: ₹70,000
+   - AI Automation Risk: 10%, Future Proof: 98%, Industry Growth: 20%/year
+
+6. AI/ML Engineer
+   - Required: coding, ai_ml, python, data_analysis
+   - Min Education: B.Tech, Preferred: M.Tech/PhD
+   - Salary: Entry ₹9L → 5yr ₹28L → 10yr ₹60L
+   - Market Demand: 99%, Competition: 95%, Success Rate: 70%
+   - Remote Friendly: 90%, Freelance: 70%, Job Security: 90%
+   - Learning Curve: Very Steep, Time to Proficiency: 4-6 years
+   - Initial Investment: ₹1,50,000
+   - AI Automation Risk: 5%, Future Proof: 99%, Industry Growth: 35%/year
+
+7. DevOps Engineer
+   - Required: coding, devops, cloud_computing
+   - Min Education: 12th, Preferred: B.Tech
+   - Salary: Entry ₹6L → 5yr ₹18L → 10yr ₹32L
+   - Market Demand: 92%, Competition: 80%, Success Rate: 78%
+   - Remote Friendly: 85%, Freelance: 70%, Job Security: 85%
+   - Learning Curve: Steep, Time to Proficiency: 3-4 years
+   - Initial Investment: ₹60,000
+   - AI Automation Risk: 20%, Future Proof: 90%, Industry Growth: 20%/year
+
+8. Blockchain Developer
+   - Required: coding, cryptography, smart_contracts
+   - Min Education: 12th, Preferred: B.Tech
+   - Salary: Entry ₹7L → 5yr ₹22L → 10yr ₹45L
+   - Market Demand: 85%, Competition: 70%, Success Rate: 65%
+   - Remote Friendly: 95%, Freelance: 85%, Job Security: 70%
+   - Learning Curve: Very Steep, Time to Proficiency: 3-5 years
+   - Initial Investment: ₹80,000
+   - AI Automation Risk: 15%, Future Proof: 85%, Industry Growth: 40%/year
+
+9. Game Developer (Unity/Unreal)
+   - Required: coding, game_engines, 3d_modeling
+   - Min Education: 12th, Preferred: B.Tech/B.Des
+   - Salary: Entry ₹4L → 5yr ₹12L → 10yr ₹25L
+   - Market Demand: 75%, Competition: 85%, Success Rate: 60%
+   - Remote Friendly: 80%, Freelance: 80%, Job Security: 65%
+   - Learning Curve: Steep, Time to Proficiency: 3-4 years
+   - Initial Investment: ₹1,00,000
+   - AI Automation Risk: 30%, Future Proof: 80%, Industry Growth: 15%/year
+
+10. UI/UX Designer (Tech)
+    - Required: design, prototyping, user_research
+    - Min Education: 12th, Preferred: B.Des
+    - Salary: Entry ₹4.5L → 5yr ₹13L → 10yr ₹24L
+    - Market Demand: 88%, Competition: 85%, Success Rate: 75%
+    - Remote Friendly: 95%, Freelance: 90%, Job Security: 75%
+    - Learning Curve: Medium, Time to Proficiency: 2-3 years
+    - Initial Investment: ₹40,000
+    - AI Automation Risk: 40%, Future Proof: 75%, Industry Growth: 12%/year
+
+TIER 2: CREATIVE & DIGITAL CONTENT
+
+11. YouTube Content Creator (Tech/Education)
+    - Required: video_editing, content_writing, social_media
+    - Min Education: 10th
+    - Salary: Entry ₹0 → 5yr ₹15L → 10yr ₹50L
+    - Market Demand: 70%, Competition: 98%, Success Rate: 35%
+    - Remote Friendly: 100%, Freelance: 100%, Job Security: 20%
+    - Learning Curve: Medium, Time to Proficiency: 2-4 years
+    - Initial Investment: ₹80,000
+    - AI Automation Risk: 50%, Future Proof: 60%, Industry Growth: 25%/year
+
+12. Digital Marketing Specialist
+    - Required: marketing, analytics, social_media
+    - Min Education: 10th, Preferred: Graduate
+    - Salary: Entry ₹3L → 5yr ₹9L → 10yr ₹18L
+    - Market Demand: 90%, Competition: 88%, Success Rate: 70%
+    - Remote Friendly: 90%, Freelance: 95%, Job Security: 70%
+    - Learning Curve: Easy, Time to Proficiency: 1-2 years
+    - Initial Investment: ₹30,000
+    - AI Automation Risk: 60%, Future Proof: 65%, Industry Growth: 18%/year
+
+13. Social Media Manager
+    - Required: social_media, content_creation, community_management
+    - Min Education: 10th, Preferred: Graduate
+    - Salary: Entry ₹3L → 5yr ₹8L → 10yr ₹15L
+    - Market Demand: 85%, Competition: 90%, Success Rate: 75%
+    - Remote Friendly: 95%, Freelance: 90%, Job Security: 65%
+    - Learning Curve: Easy, Time to Proficiency: 1-2 years
+    - Initial Investment: ₹20,000
+    - AI Automation Risk: 70%, Future Proof: 55%, Industry Growth: 12%/year
+
+14. Professional Dancer (Commercial/Bollywood)
+    - Required: dancing, choreography, physical_fitness
+    - Min Education: 10th
+    - Salary: Entry ₹1.5L → 5yr ₹6L → 10yr ₹15L
+    - Market Demand: 45%, Competition: 95%, Success Rate: 25%
+    - Remote Friendly: 10%, Freelance: 90%, Job Security: 30%
+    - Learning Curve: Steep, Time to Proficiency: 5-10 years
+    - Initial Investment: ₹1,00,000
+    - AI Automation Risk: 5%, Future Proof: 70%, Industry Growth: 5%/year
+
+15. Music Producer (Electronic/Hip-Hop)
+    - Required: music_production, sound_engineering, mixing
+    - Min Education: 10th, Preferred: Audio Engineering Diploma
+    - Salary: Entry ₹2L → 5yr ₹8L → 10yr ₹25L
+    - Market Demand: 60%, Competition: 90%, Success Rate: 40%
+    - Remote Friendly: 80%, Freelance: 95%, Job Security: 40%
+    - Learning Curve: Steep, Time to Proficiency: 3-5 years
+    - Initial Investment: ₹2,00,000
+    - AI Automation Risk: 45%, Future Proof: 65%, Industry Growth: 10%/year
+
+16. Video Editor (Freelance/Agency)
+    - Required: video_editing, color_grading, motion_graphics
+    - Min Education: 10th, Preferred: Diploma
+    - Salary: Entry ₹2.5L → 5yr ₹7L → 10yr ₹14L
+    - Market Demand: 85%, Competition: 85%, Success Rate: 65%
+    - Remote Friendly: 95%, Freelance: 98%, Job Security: 60%
+    - Learning Curve: Medium, Time to Proficiency: 1-2 years
+    - Initial Investment: ₹60,000
+    - AI Automation Risk: 55%, Future Proof: 65%, Industry Growth: 15%/year
+
+17. Graphic Designer (Brand/Digital)
+    - Required: graphic_design, illustration, branding
+    - Min Education: 10th, Preferred: B.Des
+    - Salary: Entry ₹2.5L → 5yr ₹6.5L → 10yr ₹12L
+    - Market Demand: 80%, Competition: 90%, Success Rate: 70%
+    - Remote Friendly: 95%, Freelance: 95%, Job Security: 65%
+    - Learning Curve: Medium, Time to Proficiency: 2-3 years
+    - Initial Investment: ₹40,000
+    - AI Automation Risk: 65%, Future Proof: 55%, Industry Growth: 8%/year
+
+18. Photography (Wedding/Commercial)
+    - Required: photography, photo_editing, lighting
+    - Min Education: 10th, Preferred: Diploma
+    - Salary: Entry ₹3L → 5yr ₹8L → 10yr ₹15L
+    - Market Demand: 70%, Competition: 85%, Success Rate: 55%
+    - Remote Friendly: 30%, Freelance: 95%, Job Security: 50%
+    - Learning Curve: Medium, Time to Proficiency: 2-3 years
+    - Initial Investment: ₹1,50,000
+    - AI Automation Risk: 40%, Future Proof: 70%, Industry Growth: 6%/year
+
+TIER 3: BUSINESS & ENTREPRENEURSHIP
+
+19. E-commerce Business Owner (Amazon/Shopify)
+    - Required: e_commerce, marketing, supply_chain
+    - Min Education: 10th
+    - Salary: Entry ₹0 → 5yr ₹12L → 10yr ₹50L
+    - Market Demand: 80%, Competition: 88%, Success Rate: 45%
+    - Remote Friendly: 90%, Freelance: N/A, Job Security: 30%
+    - Learning Curve: Steep, Time to Proficiency: 2-4 years
+    - Initial Investment: ₹2,00,000
+    - AI Automation Risk: 40%, Future Proof: 75%, Industry Growth: 20%/year
+
+20. Digital Products Creator (Courses/Templates)
+    - Required: expertise_in_domain, teaching, marketing
+    - Min Education: 10th, Preferred: Expert in Field
+    - Salary: Entry ₹0 → 5yr ₹10L → 10yr ₹30L
+    - Market Demand: 75%, Competition: 90%, Success Rate: 40%
+    - Remote Friendly: 100%, Freelance: 100%, Job Security: 35%
+    - Learning Curve: Medium, Time to Proficiency: 1-3 years
+    - Initial Investment: ₹50,000
+    - AI Automation Risk: 50%, Future Proof: 70%, Industry Growth: 22%/year
+
+21. SaaS Startup Founder
+    - Required: coding, business, product_management
+    - Min Education: 12th, Preferred: B.Tech
+    - Salary: Entry ₹0 → 5yr ₹20L → 10yr ₹1Cr
+    - Market Demand: 70%, Competition: 85%, Success Rate: 15%
+    - Remote Friendly: 100%, Freelance: N/A, Job Security: 20%
+    - Learning Curve: Very Steep, Time to Proficiency: 5-10 years
+    - Initial Investment: ₹5,00,000
+    - AI Automation Risk: 10%, Future Proof: 85%, Industry Growth: 30%/year
+
+22. Freelance Consultant (Tech/Business)
+    - Required: expertise, communication, business
+    - Min Education: Graduate, Preferred: MBA/Experience
+    - Salary: Entry ₹5L → 5yr ₹15L → 10yr ₹35L
+    - Market Demand: 75%, Competition: 80%, Success Rate: 50%
+    - Remote Friendly: 95%, Freelance: 100%, Job Security: 60%
+    - Learning Curve: Steep, Time to Proficiency: 5-8 years
+    - Initial Investment: ₹1,00,000
+    - AI Automation Risk: 30%, Future Proof: 80%, Industry Growth: 12%/year
+
+TIER 4: TRADITIONAL & SERVICE
+
+23. Software Tester (Manual/Automation)
+    - Required: testing, automation, scripting
+    - Min Education: 12th, Preferred: B.Tech
+    - Salary: Entry ₹3L → 5yr ₹8L → 10yr ₹15L
+    - Market Demand: 85%, Competition: 75%, Success Rate: 85%
+    - Remote Friendly: 85%, Freelance: 60%, Job Security: 75%
+    - Learning Curve: Easy, Time to Proficiency: 1-2 years
+    - Initial Investment: ₹30,000
+    - AI Automation Risk: 70%, Future Proof: 50%, Industry Growth: 8%/year
+
+24. Business Analyst
+    - Required: analysis, documentation, communication
+    - Min Education: Graduate, Preferred: MBA
+    - Salary: Entry ₹4.5L → 5yr ₹12L → 10yr ₹22L
+    - Market Demand: 85%, Competition: 80%, Success Rate: 75%
+    - Remote Friendly: 80%, Freelance: 50%, Job Security: 80%
+    - Learning Curve: Medium, Time to Proficiency: 2-3 years
+    - Initial Investment: ₹50,000
+    - AI Automation Risk: 50%, Future Proof: 70%, Industry Growth: 10%/year
+
+25. HR Manager
+    - Required: hr_management, recruitment, employee_relations
+    - Min Education: Graduate, Preferred: MBA-HR
+    - Salary: Entry ₹4L → 5yr ₹10L → 10yr ₹18L
+    - Market Demand: 75%, Competition: 75%, Success Rate: 70%
+    - Remote Friendly: 60%, Freelance: 40%, Job Security: 75%
+    - Learning Curve: Medium, Time to Proficiency: 3-5 years
+    - Initial Investment: ₹1,00,000
+    - AI Automation Risk: 40%, Future Proof: 70%, Industry Growth: 6%/year
+
+26. Customer Support Executive (Tech)
+    - Required: communication, technical_knowledge, crm
+    - Min Education: 10th, Preferred: Graduate
+    - Salary: Entry ₹2.5L → 5yr ₹5L → 10yr ₹8L
+    - Market Demand: 80%, Competition: 70%, Success Rate: 90%
+    - Remote Friendly: 90%, Freelance: 30%, Job Security: 60%
+    - Learning Curve: Easy, Time to Proficiency: 0-1 year
+    - Initial Investment: ₹10,000
+    - AI Automation Risk: 85%, Future Proof: 30%, Industry Growth: 3%/year
+
+27. BPO/Call Center (International Voice)
+    - Required: communication, accent, customer_service
+    - Min Education: 10th, Preferred: 12th
+    - Salary: Entry ₹2.5L → 5yr ₹4L → 10yr ₹6L
+    - Market Demand: 70%, Competition: 60%, Success Rate: 95%
+    - Remote Friendly: 70%, Freelance: 10%, Job Security: 50%
+    - Learning Curve: Easy, Time to Proficiency: 0-6 months
+    - Initial Investment: ₹5,000
+    - AI Automation Risk: 90%, Future Proof: 20%, Industry Growth: -2%/year
+
+28. Data Entry Operator
+    - Required: typing, accuracy, ms_office
+    - Min Education: 10th, Preferred: 12th
+    - Salary: Entry ₹1.8L → 5yr ₹2.5L → 10yr ₹3.5L
+    - Market Demand: 60%, Competition: 65%, Success Rate: 95%
+    - Remote Friendly: 80%, Freelance: 50%, Job Security: 40%
+    - Learning Curve: Very Easy, Time to Proficiency: 0-3 months
+    - Initial Investment: ₹5,000
+    - AI Automation Risk: 95%, Future Proof: 10%, Industry Growth: -5%/year
+
+TIER 5: EDUCATION & TRAINING
+
+29. Online Coding Instructor (Unacademy/BYJU'S)
+    - Required: coding, teaching, communication
+    - Min Education: 12th, Preferred: B.Tech
+    - Salary: Entry ₹4L → 5yr ₹10L → 10yr ₹18L
+    - Market Demand: 85%, Competition: 75%, Success Rate: 70%
+    - Remote Friendly: 100%, Freelance: 90%, Job Security: 70%
+    - Learning Curve: Medium, Time to Proficiency: 2-3 years
+    - Initial Investment: ₹50,000
+    - AI Automation Risk: 45%, Future Proof: 75%, Industry Growth: 18%/year
+
+30. Dance Academy Owner
+    - Required: dancing, teaching, business
+    - Min Education: 10th, Preferred: Certification
+    - Salary: Entry ₹2L → 5yr ₹6L → 10yr ₹15L
+    - Market Demand: 65%, Competition: 70%, Success Rate: 55%
+    - Remote Friendly: 30%, Freelance: 50%, Job Security: 60%
+    - Learning Curve: Medium, Time to Proficiency: 3-5 years
+    - Initial Investment: ₹3,00,000
+    - AI Automation Risk: 10%, Future Proof: 80%, Industry Growth: 7%/year
+
+TIER 6: MORE OPTIONS
+
+31. Product Manager (Tech)
+    - Required: product_strategy, analytics, communication
+    - Min Education: Graduate, Preferred: MBA
+    - Salary: Entry ₹12L → 5yr ₹30L → 10yr ₹60L
+    - Market Demand: 90%, Competition: 85%, Success Rate: 65%
+    - Remote Friendly: 80%, Freelance: 40%, Job Security: 80%
+    - Learning Curve: Steep, Time to Proficiency: 5-7 years
+    - Initial Investment: ₹2,00,000
+    - AI Automation Risk: 25%, Future Proof: 90%, Industry Growth: 20%/year
+
+32. Ethical Hacker (Bug Bounty Hunter)
+    - Required: hacking, networking, security_tools
+    - Min Education: 12th, Preferred: Certifications
+    - Salary: Entry ₹6L → 5yr ₹20L → 10yr ₹40L
+    - Market Demand: 95%, Competition: 70%, Success Rate: 55%
+    - Remote Friendly: 100%, Freelance: 85%, Job Security: 85%
+    - Learning Curve: Very Steep, Time to Proficiency: 3-5 years
+    - Initial Investment: ₹80,000
+    - AI Automation Risk: 15%, Future Proof: 95%, Industry Growth: 25%/year
+
+33. 3D Animator (Films/Gaming)
+    - Required: 3d_animation, modeling, rendering
+    - Min Education: 12th, Preferred: Animation Degree
+    - Salary: Entry ₹3.5L → 5yr ₹10L → 10yr ₹20L
+    - Market Demand: 75%, Competition: 80%, Success Rate: 60%
+    - Remote Friendly: 85%, Freelance: 85%, Job Security: 65%
+    - Learning Curve: Steep, Time to Proficiency: 3-4 years
+    - Initial Investment: ₹1,50,000
+    - AI Automation Risk: 50%, Future Proof: 70%, Industry Growth: 12%/year
+
+34. Voice Over Artist (Dubbing/Ads)
+    - Required: voice_modulation, acting, accent
+    - Min Education: 10th, Preferred: Training
+    - Salary: Entry ₹2L → 5yr ₹6L → 10yr ₹12L
+    - Market Demand: 60%, Competition: 85%, Success Rate: 45%
+    - Remote Friendly: 90%, Freelance: 95%, Job Security: 50%
+    - Learning Curve: Medium, Time to Proficiency: 2-3 years
+    - Initial Investment: ₹1,00,000
+    - AI Automation Risk: 60%, Future Proof: 55%, Industry Growth: 8%/year
+
+35. Podcast Host/Producer
+    - Required: audio_editing, storytelling, interviewing
+    - Min Education: 10th
+    - Salary: Entry ₹0 → 5yr ₹8L → 10yr ₹25L
+    - Market Demand: 65%, Competition: 85%, Success Rate: 40%
+    - Remote Friendly: 100%, Freelance: 100%, Job Security: 35%
+    - Learning Curve: Medium, Time to Proficiency: 1-3 years
+    - Initial Investment: ₹80,000
+    - AI Automation Risk: 40%, Future Proof: 70%, Industry Growth: 20%/year
+
+36. SEO Specialist
+    - Required: seo, analytics, content_strategy
+    - Min Education: 10th, Preferred: Graduate
+    - Salary: Entry ₹3L → 5yr ₹9L → 10yr ₹16L
+    - Market Demand: 88%, Competition: 82%, Success Rate: 75%
+    - Remote Friendly: 95%, Freelance: 95%, Job Security: 75%
+    - Learning Curve: Medium, Time to Proficiency: 1-2 years
+    - Initial Investment: ₹20,000
+    - AI Automation Risk: 55%, Future Proof: 70%, Industry Growth: 15%/year
+
+37. Instagram/TikTok Influencer
+    - Required: content_creation, video_editing, personal_branding
+    - Min Education: 10th
+    - Salary: Entry ₹0 → 5yr ₹20L → 10yr ₹1Cr
+    - Market Demand: 60%, Competition: 99%, Success Rate: 15%
+    - Remote Friendly: 100%, Freelance: 100%, Job Security: 10%
+    - Learning Curve: Medium, Time to Proficiency: 2-5 years
+    - Initial Investment: ₹50,000
+    - AI Automation Risk: 30%, Future Proof: 50%, Industry Growth: 30%/year
+
+38. Copywriter (Ads/Content)
+    - Required: writing, marketing, persuasion
+    - Min Education: 10th, Preferred: Graduate
+    - Salary: Entry ₹3L → 5yr ₹8L → 10yr ₹14L
+    - Market Demand: 80%, Competition: 85%, Success Rate: 70%
+    - Remote Friendly: 100%, Freelance: 95%, Job Security: 70%
+    - Learning Curve: Medium, Time to Proficiency: 2-3 years
+    - Initial Investment: ₹10,000
+    - AI Automation Risk: 70%, Future Proof: 50%, Industry Growth: 10%/year
+
+39. Fitness Trainer (Online/Gym)
+    - Required: fitness_knowledge, nutrition, training_methods
+    - Min Education: 10th, Preferred: Certification
+    - Salary: Entry ₹2.5L → 5yr ₹7L → 10yr ₹15L
+    - Market Demand: 75%, Competition: 80%, Success Rate: 60%
+    - Remote Friendly: 60%, Freelance: 90%, Job Security: 60%
+    - Learning Curve: Medium, Time to Proficiency: 1-2 years
+    - Initial Investment: ₹1,00,000
+    - AI Automation Risk: 35%, Future Proof: 75%, Industry Growth: 15%/year
+
+40. Travel Vlogger
+    - Required: videography, storytelling, social_media
+    - Min Education: 10th
+    - Salary: Entry ₹0 → 5yr ₹15L → 10yr ₹50L
+    - Market Demand: 50%, Competition: 95%, Success Rate: 20%
+    - Remote Friendly: 100%, Freelance: 100%, Job Security: 20%
+    - Learning Curve: Medium, Time to Proficiency: 2-4 years
+    - Initial Investment: ₹2,00,000
+    - AI Automation Risk: 25%, Future Proof: 65%, Industry Growth: 18%/year
+
+41. Cyber Cafe/Gaming Cafe Owner
+    - Required: business, gaming_knowledge, customer_service
+    - Min Education: 10th
+    - Salary: Entry ₹3L → 5yr ₹8L → 10yr ₹15L
+    - Market Demand: 55%, Competition: 70%, Success Rate: 50%
+    - Remote Friendly: 0%, Freelance: N/A, Job Security: 50%
+    - Learning Curve: Medium, Time to Proficiency: 1-2 years
+    - Initial Investment: ₹5,00,000
+    - AI Automation Risk: 20%, Future Proof: 70%, Industry Growth: 12%/year
+
+42. App-Based Driver (Uber/Ola)
+    - Required: driving, navigation, customer_service
+    - Min Education: 10th, Preferred: License
+    - Salary: Entry ₹3L → 5yr ₹4L → 10yr ₹5L
+    - Market Demand: 70%, Competition: 80%, Success Rate: 85%
+    - Remote Friendly: 0%, Freelance: 90%, Job Security: 40%
+    - Learning Curve: Very Easy, Time to Proficiency: 0-1 month
+    - Initial Investment: ₹3,00,000
+    - AI Automation Risk: 95%, Future Proof: 15%, Industry Growth: 0%/year
+
+43. Food Delivery Partner (Swiggy/Zomato)
+    - Required: navigation, time_management, vehicle_handling
+    - Min Education: 10th
+    - Salary: Entry ₹2L → 5yr ₹2.5L → 10yr ₹3L
+    - Market Demand: 75%, Competition: 75%, Success Rate: 90%
+    - Remote Friendly: 0%, Freelance: 95%, Job Security: 30%
+    - Learning Curve: Very Easy, Time to Proficiency: 0-1 week
+    - Initial Investment: ₹50,000
+    - AI Automation Risk: 90%, Future Proof: 20%, Industry Growth: 2%/year
+
+44. Event Planner/Coordinator
+    - Required: planning, coordination, vendor_management
+    - Min Education: 10th, Preferred: Diploma
+    - Salary: Entry ₹3L → 5yr ₹8L → 10yr ₹15L
+    - Market Demand: 70%, Competition: 75%, Success Rate: 65%
+    - Remote Friendly: 40%, Freelance: 85%, Job Security: 60%
+    - Learning Curve: Medium, Time to Proficiency: 2-3 years
+    - Initial Investment: ₹1,00,000
+    - AI Automation Risk: 30%, Future Proof: 75%, Industry Growth: 8%/year
+
+45. Real Estate Agent
+    - Required: sales, negotiation, market_knowledge
+    - Min Education: 10th
+    - Salary: Entry ₹3L → 5yr ₹10L → 10yr ₹25L
+    - Market Demand: 70%, Competition: 80%, Success Rate: 55%
+    - Remote Friendly: 30%, Freelance: 90%, Job Security: 50%
+    - Learning Curve: Medium, Time to Proficiency: 1-2 years
+    - Initial Investment: ₹50,000
+    - AI Automation Risk: 40%, Future Proof: 70%, Industry Growth: 10%/year
+
+46. Insurance Agent
+    - Required: sales, product_knowledge, customer_service
+    - Min Education: 10th, Preferred: 12th + License
+    - Salary: Entry ₹2.5L → 5yr ₹6L → 10yr ₹12L
+    - Market Demand: 65%, Competition: 75%, Success Rate: 60%
+    - Remote Friendly: 50%, Freelance: 80%, Job Security: 60%
+    - Learning Curve: Medium, Time to Proficiency: 1-2 years
+    - Initial Investment: ₹30,000
+    - AI Automation Risk: 50%, Future Proof: 65%, Industry Growth: 7%/year
+
+47. Personal Stylist/Image Consultant
+    - Required: fashion_sense, color_theory, body_types
+    - Min Education: 10th, Preferred: Certification
+    - Salary: Entry ₹2.5L → 5yr ₹7L → 10yr ₹15L
+    - Market Demand: 60%, Competition: 75%, Success Rate: 50%
+    - Remote Friendly: 40%, Freelance: 90%, Job Security: 55%
+    - Learning Curve: Medium, Time to Proficiency: 2-3 years
+    - Initial Investment: ₹1,00,000
+    - AI Automation Risk: 45%, Future Proof: 70%, Industry Growth: 9%/year
+
+48. Tattoo Artist
+    - Required: drawing, tattooing, hygiene
+    - Min Education: 10th, Preferred: Apprenticeship
+    - Salary: Entry ₹3L → 5yr ₹8L → 10yr ₹15L
+    - Market Demand: 60%, Competition: 70%, Success Rate: 55%
+    - Remote Friendly: 0%, Freelance: 85%, Job Security: 60%
+    - Learning Curve: Steep, Time to Proficiency: 3-5 years
+    - Initial Investment: ₹2,00,000
+    - AI Automation Risk: 15%, Future Proof: 85%, Industry Growth: 12%/year
+
+49. Stand-up Comedian
+    - Required: comedy_writing, stage_presence, timing
+    - Min Education: 10th
+    - Salary: Entry ₹0 → 5yr ₹10L → 10yr ₹50L
+    - Market Demand: 50%, Competition: 90%, Success Rate: 20%
+    - Remote Friendly: 30%, Freelance: 95%, Job Security: 25%
+    - Learning Curve: Very Steep, Time to Proficiency: 5-10 years
+    - Initial Investment: ₹50,000
+    - AI Automation Risk: 10%, Future Proof: 80%, Industry Growth: 15%/year
+
+50. Dropshipping Business Owner
+    - Required: e_commerce, marketing, supplier_management
+    - Min Education: 10th
+    - Salary: Entry ₹0 → 5yr ₹10L → 10yr ₹30L
+    - Market Demand: 75%, Competition: 90%, Success Rate: 35%
+    - Remote Friendly: 100%, Freelance: N/A, Job Security: 30%
+    - Learning Curve: Medium, Time to Proficiency: 1-2 years
+    - Initial Investment: ₹1,00,000
+    - AI Automation Risk: 45%, Future Proof: 70%, Industry Growth: 18%/year
+
+═══════════════════════════════════════════════════════════════════════════════
+YOUR TASK
+═══════════════════════════════════════════════════════════════════════════════
+
+Analyze ALL 50 career options comprehensively considering:
+
+1. SKILL ALIGNMENT (30%)
+   - Match my technical, creative, soft skills, and domain knowledge
+   - Calculate percentage fit for each career
+
+2. FINANCIAL GOALS (20%)
+   - Does it meet my 5-year target (₹8 LPA)?
+   - Does it meet my 10-year target (₹20 LPA)?
+   - What's the realistic earning trajectory?
+
+3. LIFESTYLE & PERSONALITY FIT (20%)
+   - Matches work preferences (hybrid, flexible hours)
+   - Aligns with risk tolerance (70%)
+   - Supports entrepreneurship goals (70% interest)
+   - Work-life balance compatibility
+
+4. MARKET VIABILITY (20%)
+   - Market demand vs competition
+   - Future-proof score (AI automation resistance)
+   - Industry growth rate
+   - Job security
+
+5. PRACTICAL CONSTRAINTS (10%)
+   - Education requirements feasible?
+   - Initial investment within budget?
+   - Time to proficiency acceptable?
+   - Learning curve manageable?
+
+PROVIDE:
+
+✅ TOP 5 RECOMMENDED CAREERS
+   - Ranked by overall fit score (0-100)
+   - Detailed breakdown of why each is recommended
+   - Specific action plan for each
+   - Salary trajectory and ROI analysis
+   - Risk assessment
+
+✅ SCORES FOR ALL 50 CAREERS
+   - Brief 1-line verdict for each
+   - Overall score out of 100
+   - Key strength and key weakness
+
+✅ STRATEGIC RECOMMENDATIONS
+   - Which career should I start with?
+   - What skills should I prioritize learning?
+   - What's the optimal career path for next 10 years?
+   - Should I pursue multiple careers simultaneously?
+
+✅ COMPARISON TABLE
+   - Top 5 careers side-by-side comparison
+   - Include: Score, Salary (5yr/10yr), Investment, Risk, Time
+
+Be extremely thorough and analytical. This is a life-changing decision!
