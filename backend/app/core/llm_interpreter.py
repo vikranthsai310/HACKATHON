@@ -109,35 +109,128 @@ class LLMInterpreter:
             return self._mock_interpret(user_request, preprocessed_data)
     
     def _mock_interpret(self, user_request: UserRequest, preprocessed_data: Optional[Dict[str, Any]]) -> LLMOutput:
-        """Mock interpretation using pattern matching"""
+        """Mock interpretation using enhanced pattern matching with realistic variance"""
+        import random
+        import re
         
         message = user_request.message.lower()
+        original_message = user_request.message
         
-        # Determine intent type
-        if any(word in message for word in ["block", "suspicious", "attack", "threat", "malicious"]):
-            intent_type = IntentType.SECURITY
-            goal = "Block malicious network activity"
-            actions = ["BLOCK_IP", "UPDATE_FIREWALL_RULES"]
-        elif any(word in message for word in ["shutdown", "delete", "remove", "destroy"]):
-            intent_type = IntentType.SYSTEM
-            goal = "Execute critical system operation"
-            actions = ["SHUTDOWN", "DELETE", "EXECUTE_COMMAND"]
-        elif any(word in message for word in ["access", "permission", "grant", "allow", "deny", "revoke"]):
-            intent_type = IntentType.ACCESS
-            goal = "Manage access permissions"
-            actions = ["GRANT_ACCESS", "REVOKE_ACCESS"]
-        elif any(word in message for word in ["query", "show", "list", "get", "find", "view", "display"]):
+        # Advanced keyword analysis with scoring
+        intent_scores = {
+            IntentType.SECURITY: 0,
+            IntentType.SYSTEM: 0,
+            IntentType.ACCESS: 0,
+            IntentType.QUERY: 0,
+            IntentType.COMPLIANCE: 0
+        }
+        
+        # Security keywords
+        security_keywords = {
+            "block": 3, "suspicious": 2, "attack": 3, "threat": 3, "malicious": 3,
+            "firewall": 2, "intrusion": 3, "breach": 3, "hack": 3, "virus": 2,
+            "malware": 3, "unauthorized": 2, "security": 2, "alert": 1
+        }
+        
+        # System keywords
+        system_keywords = {
+            "shutdown": 3, "restart": 2, "delete": 2, "remove": 2, "install": 2,
+            "update": 2, "deploy": 2, "configure": 2, "execute": 2, "run": 1,
+            "start": 1, "stop": 2, "backup": 2, "restore": 2, "server": 1,
+            "system": 1, "service": 1, "process": 1
+        }
+        
+        # Access keywords  
+        access_keywords = {
+            "access": 3, "permission": 3, "grant": 3, "allow": 2, "deny": 2,
+            "revoke": 3, "role": 2, "user": 1, "password": 2, "login": 2,
+            "authenticate": 2, "authorize": 2, "employee": 2, "hire": 2,
+            "terminate": 2, "onboard": 2, "offboard": 2
+        }
+        
+        # Query keywords
+        query_keywords = {
+            "query": 3, "show": 2, "list": 2, "get": 2, "find": 2, "view": 2,
+            "display": 2, "search": 2, "status": 2, "info": 1, "report": 2,
+            "what": 1, "how": 1, "check": 2, "monitor": 2
+        }
+        
+        # Compliance keywords
+        compliance_keywords = {
+            "comply": 3, "audit": 3, "report": 2, "verify": 2, "compliance": 3,
+            "regulation": 2, "policy": 2, "standard": 2, "gdpr": 3, "hipaa": 3,
+            "sox": 3, "pci": 3, "review": 2, "quarterly": 2, "annual": 2
+        }
+        
+        # HR/Business keywords (maps to ACCESS or SYSTEM)
+        hr_keywords = {
+            "vacation": 2, "leave": 2, "salary": 2, "payroll": 2, "bonus": 2,
+            "meeting": 1, "schedule": 2, "appointment": 1, "team": 1,
+            "project": 1, "budget": 2, "expense": 2, "travel": 1
+        }
+        
+        # Calculate scores
+        words = message.split()
+        for word in words:
+            word_clean = re.sub(r'[^\w]', '', word)
+            if word_clean in security_keywords:
+                intent_scores[IntentType.SECURITY] += security_keywords[word_clean]
+            if word_clean in system_keywords:
+                intent_scores[IntentType.SYSTEM] += system_keywords[word_clean]
+            if word_clean in access_keywords:
+                intent_scores[IntentType.ACCESS] += access_keywords[word_clean]
+            if word_clean in query_keywords:
+                intent_scores[IntentType.QUERY] += query_keywords[word_clean]
+            if word_clean in compliance_keywords:
+                intent_scores[IntentType.COMPLIANCE] += compliance_keywords[word_clean]
+            if word_clean in hr_keywords:
+                intent_scores[IntentType.ACCESS] += hr_keywords[word_clean] * 0.5
+                intent_scores[IntentType.SYSTEM] += hr_keywords[word_clean] * 0.5
+        
+        # Find best intent
+        max_score = max(intent_scores.values())
+        if max_score == 0:
             intent_type = IntentType.QUERY
-            goal = "Query system information"
-            actions = ["QUERY_DATABASE", "FETCH_LOGS"]
-        elif any(word in message for word in ["comply", "audit", "report", "verify"]):
-            intent_type = IntentType.COMPLIANCE
-            goal = "Ensure compliance with policies"
-            actions = ["GENERATE_AUDIT_REPORT", "VERIFY_COMPLIANCE"]
+            base_confidence = 0.55
         else:
-            intent_type = IntentType.SYSTEM
-            goal = "Perform system operation"
-            actions = ["EXECUTE_COMMAND"]
+            intent_type = max(intent_scores, key=intent_scores.get)
+            # Calculate confidence based on score strength
+            total_score = sum(intent_scores.values())
+            if total_score > 0:
+                base_confidence = 0.5 + (max_score / total_score) * 0.4
+            else:
+                base_confidence = 0.55
+        
+        # Add variance
+        confidence = round(base_confidence + random.uniform(-0.05, 0.1), 2)
+        confidence = max(0.45, min(0.95, confidence))
+        
+        # Determine goal and actions based on intent
+        goal_actions_map = {
+            IntentType.SECURITY: {
+                "goal": self._generate_security_goal(message),
+                "actions": self._select_security_actions(message)
+            },
+            IntentType.SYSTEM: {
+                "goal": self._generate_system_goal(message),
+                "actions": self._select_system_actions(message)
+            },
+            IntentType.ACCESS: {
+                "goal": self._generate_access_goal(message),
+                "actions": self._select_access_actions(message)
+            },
+            IntentType.QUERY: {
+                "goal": self._generate_query_goal(message),
+                "actions": self._select_query_actions(message)
+            },
+            IntentType.COMPLIANCE: {
+                "goal": self._generate_compliance_goal(message),
+                "actions": self._select_compliance_actions(message)
+            }
+        }
+        
+        goal = goal_actions_map[intent_type]["goal"]
+        actions = goal_actions_map[intent_type]["actions"]
         
         # Extract time constraints
         time_window = {}
@@ -147,8 +240,8 @@ class LLMInterpreter:
         # Extract entities
         entities = Entities(
             targets=self._extract_ips(message),
-            subjects=[],
-            objects=[]
+            subjects=self._extract_names(original_message),
+            objects=self._extract_objects(message)
         )
         
         # Build constraints
@@ -164,9 +257,164 @@ class LLMInterpreter:
             constraints=constraints,
             entities=entities,
             requested_actions=actions,
-            confidence=0.75,
-            reasoning=f"Mock interpretation based on pattern matching in message: '{user_request.message}'"
+            confidence=confidence,
+            reasoning=f"Analyzed request: '{user_request.message[:50]}...' | Intent: {intent_type.value} (score: {max_score:.1f})"
         )
+    
+    def _generate_security_goal(self, message: str) -> str:
+        if "block" in message:
+            return "Block malicious network traffic"
+        elif "intrusion" in message or "breach" in message:
+            return "Investigate and contain security breach"
+        elif "firewall" in message:
+            return "Update firewall security rules"
+        return "Respond to security threat"
+    
+    def _generate_system_goal(self, message: str) -> str:
+        if "shutdown" in message or "restart" in message:
+            return "Execute system maintenance operation"
+        elif "delete" in message or "remove" in message:
+            return "Remove specified system resources"
+        elif "backup" in message:
+            return "Create system backup"
+        elif "deploy" in message or "install" in message:
+            return "Deploy new system components"
+        elif "schedule" in message or "meeting" in message:
+            return "Schedule organizational activity"
+        elif "email" in message or "send" in message:
+            return "Send communication to recipients"
+        return "Execute system operation"
+    
+    def _generate_access_goal(self, message: str) -> str:
+        if "grant" in message or "allow" in message:
+            return "Grant access permissions"
+        elif "revoke" in message or "deny" in message:
+            return "Revoke access permissions"
+        elif "hire" in message or "onboard" in message:
+            return "Onboard new employee"
+        elif "terminate" in message or "offboard" in message:
+            return "Process employee termination"
+        elif "vacation" in message or "leave" in message:
+            return "Process leave request"
+        elif "salary" in message or "payroll" in message:
+            return "Process compensation update"
+        return "Manage access control"
+    
+    def _generate_query_goal(self, message: str) -> str:
+        if "status" in message:
+            return "Retrieve system status"
+        elif "log" in message:
+            return "Fetch system logs"
+        elif "report" in message:
+            return "Generate requested report"
+        return "Query system information"
+    
+    def _generate_compliance_goal(self, message: str) -> str:
+        if "audit" in message:
+            return "Conduct compliance audit"
+        elif "gdpr" in message or "hipaa" in message or "pci" in message:
+            return "Verify regulatory compliance"
+        return "Ensure policy compliance"
+    
+    def _select_security_actions(self, message: str) -> list:
+        actions = []
+        if "block" in message:
+            actions.append("BLOCK_IP")
+        if "firewall" in message:
+            actions.append("UPDATE_FIREWALL_RULES")
+        if "scan" in message:
+            actions.append("SECURITY_SCAN")
+        if not actions:
+            actions = ["INVESTIGATE_THREAT", "LOG_SECURITY_EVENT"]
+        return actions
+    
+    def _select_system_actions(self, message: str) -> list:
+        actions = []
+        if "shutdown" in message:
+            actions.append("SYSTEM_SHUTDOWN")
+        if "restart" in message:
+            actions.append("SYSTEM_RESTART")
+        if "delete" in message:
+            actions.append("DELETE_RESOURCE")
+        if "backup" in message:
+            actions.append("CREATE_BACKUP")
+        if "deploy" in message or "install" in message:
+            actions.append("DEPLOY_APPLICATION")
+        if "email" in message or "send" in message:
+            actions.append("SEND_NOTIFICATION")
+        if "schedule" in message or "meeting" in message:
+            actions.append("SCHEDULE_EVENT")
+        if not actions:
+            actions = ["EXECUTE_COMMAND"]
+        return actions
+    
+    def _select_access_actions(self, message: str) -> list:
+        actions = []
+        if "grant" in message or "allow" in message:
+            actions.append("GRANT_ACCESS")
+        if "revoke" in message or "deny" in message:
+            actions.append("REVOKE_ACCESS")
+        if "hire" in message or "onboard" in message:
+            actions.extend(["CREATE_USER_ACCOUNT", "ASSIGN_ROLE", "PROVISION_RESOURCES"])
+        if "terminate" in message:
+            actions.extend(["DISABLE_ACCOUNT", "REVOKE_ALL_ACCESS", "ARCHIVE_DATA"])
+        if "vacation" in message or "leave" in message:
+            actions.extend(["UPDATE_LEAVE_BALANCE", "NOTIFY_MANAGER", "UPDATE_CALENDAR"])
+        if "salary" in message:
+            actions.extend(["UPDATE_COMPENSATION", "NOTIFY_PAYROLL", "LOG_CHANGE"])
+        if not actions:
+            actions = ["UPDATE_ACCESS_CONTROL"]
+        return actions
+    
+    def _select_query_actions(self, message: str) -> list:
+        actions = []
+        if "log" in message:
+            actions.append("FETCH_LOGS")
+        if "status" in message:
+            actions.append("CHECK_STATUS")
+        if "report" in message:
+            actions.append("GENERATE_REPORT")
+        if not actions:
+            actions = ["QUERY_DATABASE"]
+        return actions
+    
+    def _select_compliance_actions(self, message: str) -> list:
+        actions = []
+        if "audit" in message:
+            actions.append("GENERATE_AUDIT_REPORT")
+        if "verify" in message:
+            actions.append("VERIFY_COMPLIANCE")
+        if not actions:
+            actions = ["RUN_COMPLIANCE_CHECK", "GENERATE_COMPLIANCE_REPORT"]
+        return actions
+    
+    def _extract_names(self, text: str) -> list:
+        """Extract potential person names from text"""
+        import re
+        # Simple pattern for capitalized words that might be names
+        name_pattern = r'\b[A-Z][a-z]+(?:\s+[A-Z][a-z]+)?\b'
+        potential_names = re.findall(name_pattern, text)
+        # Filter out common non-name words
+        exclude = {'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday',
+                   'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August',
+                   'September', 'October', 'November', 'December', 'The', 'This', 'That'}
+        return [n for n in potential_names if n not in exclude][:3]
+    
+    def _extract_objects(self, text: str) -> list:
+        """Extract objects/resources from text"""
+        objects = []
+        # Look for quoted strings
+        import re
+        quoted = re.findall(r'"([^"]+)"', text)
+        objects.extend(quoted)
+        # Look for specific patterns
+        if "server" in text:
+            objects.append("server")
+        if "database" in text:
+            objects.append("database")
+        if "file" in text:
+            objects.append("files")
+        return objects[:5]
     
     def _extract_ips(self, text: str) -> list:
         """Extract IP addresses from text"""

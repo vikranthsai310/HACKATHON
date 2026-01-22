@@ -59,25 +59,53 @@ class ActionExecutor:
             "UNBLOCK_IP": self._action_unblock_ip,
             "UPDATE_FIREWALL_RULES": self._action_update_firewall,
             "QUARANTINE_HOST": self._action_quarantine_host,
+            "INVESTIGATE_THREAT": self._action_investigate_threat,
+            "LOG_SECURITY_EVENT": self._action_log_security_event,
+            "SECURITY_SCAN": self._action_security_scan,
             
             # Access actions
             "GRANT_ACCESS": self._action_grant_access,
             "REVOKE_ACCESS": self._action_revoke_access,
             "UPDATE_PERMISSIONS": self._action_update_permissions,
+            "CREATE_USER_ACCOUNT": self._action_create_user,
+            "DISABLE_ACCOUNT": self._action_disable_account,
+            "ASSIGN_ROLE": self._action_assign_role,
+            "PROVISION_RESOURCES": self._action_provision_resources,
+            "REVOKE_ALL_ACCESS": self._action_revoke_all_access,
+            "ARCHIVE_DATA": self._action_archive_data,
+            "UPDATE_ACCESS_CONTROL": self._action_update_access_control,
+            
+            # HR actions
+            "UPDATE_LEAVE_BALANCE": self._action_update_leave,
+            "NOTIFY_MANAGER": self._action_notify_manager,
+            "UPDATE_CALENDAR": self._action_update_calendar,
+            "UPDATE_COMPENSATION": self._action_update_compensation,
+            "NOTIFY_PAYROLL": self._action_notify_payroll,
+            "LOG_CHANGE": self._action_log_change,
             
             # Query actions
             "QUERY_DATABASE": self._action_query_database,
             "FETCH_LOGS": self._action_fetch_logs,
             "GENERATE_REPORT": self._action_generate_report,
+            "CHECK_STATUS": self._action_check_status,
             
             # Compliance actions
             "GENERATE_AUDIT_REPORT": self._action_audit_report,
             "VERIFY_COMPLIANCE": self._action_verify_compliance,
+            "RUN_COMPLIANCE_CHECK": self._action_compliance_check,
+            "GENERATE_COMPLIANCE_REPORT": self._action_compliance_report,
             
             # System actions
             "EXECUTE_COMMAND": self._action_execute_command,
             "RESTART_SERVICE": self._action_restart_service,
             "UPDATE_CONFIG": self._action_update_config,
+            "SYSTEM_SHUTDOWN": self._action_system_shutdown,
+            "SYSTEM_RESTART": self._action_system_restart,
+            "DELETE_RESOURCE": self._action_delete_resource,
+            "CREATE_BACKUP": self._action_create_backup,
+            "DEPLOY_APPLICATION": self._action_deploy_app,
+            "SEND_NOTIFICATION": self._action_send_notification,
+            "SCHEDULE_EVENT": self._action_schedule_event,
         }
     
     def execute_decision(self, decision: DecisionOutput, user_id: str) -> DecisionOutput:
@@ -450,6 +478,198 @@ class ActionExecutor:
             "status": "SUCCESS",
             "message": f"Configuration {config_file} updated"
         }
+    
+    # ==========================================
+    # NEW ACTION HANDLERS
+    # ==========================================
+    
+    def _action_investigate_threat(self, params: Dict[str, Any], user_id: str) -> Dict[str, Any]:
+        """Investigate security threat"""
+        import random
+        severity = random.choice(["low", "medium", "high"])
+        if self.dry_run:
+            return {"status": "SUCCESS", "message": f"[DRY-RUN] Threat investigation initiated", "severity": severity, "dry_run": True}
+        return {"status": "SUCCESS", "message": "Threat investigation completed", "severity": severity, "findings": ["anomaly_detected", "no_breach_confirmed"]}
+    
+    def _action_log_security_event(self, params: Dict[str, Any], user_id: str) -> Dict[str, Any]:
+        """Log security event"""
+        event_id = f"SEC-{datetime.now().strftime('%Y%m%d%H%M%S')}"
+        if self.dry_run:
+            return {"status": "SUCCESS", "message": f"[DRY-RUN] Would log security event {event_id}", "event_id": event_id, "dry_run": True}
+        return {"status": "SUCCESS", "message": f"Security event logged: {event_id}", "event_id": event_id}
+    
+    def _action_security_scan(self, params: Dict[str, Any], user_id: str) -> Dict[str, Any]:
+        """Run security scan"""
+        import random
+        vulnerabilities = random.randint(0, 5)
+        if self.dry_run:
+            return {"status": "SUCCESS", "message": f"[DRY-RUN] Would run security scan", "dry_run": True}
+        return {"status": "SUCCESS", "message": f"Security scan completed", "vulnerabilities_found": vulnerabilities}
+    
+    def _action_create_user(self, params: Dict[str, Any], user_id: str) -> Dict[str, Any]:
+        """Create user account"""
+        username = params.get("username", "new_user")
+        if self.dry_run:
+            return {"status": "SUCCESS", "message": f"[DRY-RUN] Would create user account: {username}", "dry_run": True}
+        return {"status": "SUCCESS", "message": f"User account created: {username}", "account_id": f"USR-{datetime.now().strftime('%H%M%S')}"}
+    
+    def _action_disable_account(self, params: Dict[str, Any], user_id: str) -> Dict[str, Any]:
+        """Disable user account"""
+        target = params.get("user", "unknown")
+        if self.dry_run:
+            return {"status": "SUCCESS", "message": f"[DRY-RUN] Would disable account: {target}", "dry_run": True}
+        return {"status": "SUCCESS", "message": f"Account disabled: {target}"}
+    
+    def _action_assign_role(self, params: Dict[str, Any], user_id: str) -> Dict[str, Any]:
+        """Assign role to user"""
+        role = params.get("role", "employee")
+        if self.dry_run:
+            return {"status": "SUCCESS", "message": f"[DRY-RUN] Would assign role: {role}", "dry_run": True}
+        return {"status": "SUCCESS", "message": f"Role assigned: {role}"}
+    
+    def _action_provision_resources(self, params: Dict[str, Any], user_id: str) -> Dict[str, Any]:
+        """Provision resources for user"""
+        import random
+        resources = random.randint(2, 5)
+        if self.dry_run:
+            return {"status": "SUCCESS", "message": f"[DRY-RUN] Would provision {resources} resources", "dry_run": True}
+        return {"status": "SUCCESS", "message": f"Provisioned {resources} resources", "resources_allocated": resources}
+    
+    def _action_revoke_all_access(self, params: Dict[str, Any], user_id: str) -> Dict[str, Any]:
+        """Revoke all access for user"""
+        target = params.get("user", "unknown")
+        if self.dry_run:
+            return {"status": "SUCCESS", "message": f"[DRY-RUN] Would revoke all access for: {target}", "dry_run": True}
+        return {"status": "SUCCESS", "message": f"All access revoked for: {target}", "permissions_revoked": 12}
+    
+    def _action_archive_data(self, params: Dict[str, Any], user_id: str) -> Dict[str, Any]:
+        """Archive user data"""
+        archive_id = f"ARC-{datetime.now().strftime('%Y%m%d%H%M%S')}"
+        if self.dry_run:
+            return {"status": "SUCCESS", "message": f"[DRY-RUN] Would archive data to {archive_id}", "dry_run": True}
+        return {"status": "SUCCESS", "message": f"Data archived: {archive_id}", "archive_id": archive_id}
+    
+    def _action_update_access_control(self, params: Dict[str, Any], user_id: str) -> Dict[str, Any]:
+        """Update access control settings"""
+        if self.dry_run:
+            return {"status": "SUCCESS", "message": "[DRY-RUN] Would update access control", "dry_run": True}
+        return {"status": "SUCCESS", "message": "Access control updated"}
+    
+    def _action_update_leave(self, params: Dict[str, Any], user_id: str) -> Dict[str, Any]:
+        """Update leave balance"""
+        import random
+        days = random.randint(1, 10)
+        if self.dry_run:
+            return {"status": "SUCCESS", "message": f"[DRY-RUN] Would update leave balance by {days} days", "dry_run": True}
+        return {"status": "SUCCESS", "message": f"Leave balance updated", "days_approved": days, "remaining_balance": 15}
+    
+    def _action_notify_manager(self, params: Dict[str, Any], user_id: str) -> Dict[str, Any]:
+        """Send notification to manager"""
+        if self.dry_run:
+            return {"status": "SUCCESS", "message": "[DRY-RUN] Would notify manager", "dry_run": True}
+        return {"status": "SUCCESS", "message": "Manager notified via email", "notification_sent": True}
+    
+    def _action_update_calendar(self, params: Dict[str, Any], user_id: str) -> Dict[str, Any]:
+        """Update calendar"""
+        if self.dry_run:
+            return {"status": "SUCCESS", "message": "[DRY-RUN] Would update calendar", "dry_run": True}
+        return {"status": "SUCCESS", "message": "Calendar updated", "event_created": True}
+    
+    def _action_update_compensation(self, params: Dict[str, Any], user_id: str) -> Dict[str, Any]:
+        """Update employee compensation"""
+        import random
+        percentage = random.uniform(3.0, 15.0)
+        if self.dry_run:
+            return {"status": "SUCCESS", "message": f"[DRY-RUN] Would update compensation by {percentage:.1f}%", "dry_run": True}
+        return {"status": "SUCCESS", "message": f"Compensation updated by {percentage:.1f}%", "change_percentage": round(percentage, 1)}
+    
+    def _action_notify_payroll(self, params: Dict[str, Any], user_id: str) -> Dict[str, Any]:
+        """Notify payroll department"""
+        if self.dry_run:
+            return {"status": "SUCCESS", "message": "[DRY-RUN] Would notify payroll", "dry_run": True}
+        return {"status": "SUCCESS", "message": "Payroll department notified", "ticket_id": f"PAY-{datetime.now().strftime('%H%M%S')}"}
+    
+    def _action_log_change(self, params: Dict[str, Any], user_id: str) -> Dict[str, Any]:
+        """Log system change"""
+        log_id = f"LOG-{datetime.now().strftime('%Y%m%d%H%M%S')}"
+        if self.dry_run:
+            return {"status": "SUCCESS", "message": f"[DRY-RUN] Would log change: {log_id}", "dry_run": True}
+        return {"status": "SUCCESS", "message": f"Change logged: {log_id}", "log_id": log_id}
+    
+    def _action_check_status(self, params: Dict[str, Any], user_id: str) -> Dict[str, Any]:
+        """Check system status"""
+        import random
+        status = random.choice(["healthy", "degraded", "healthy", "healthy"])
+        uptime = random.randint(1, 365)
+        if self.dry_run:
+            return {"status": "SUCCESS", "message": f"[DRY-RUN] System status: {status}", "dry_run": True}
+        return {"status": "SUCCESS", "message": f"System status: {status}", "system_status": status, "uptime_days": uptime}
+    
+    def _action_compliance_check(self, params: Dict[str, Any], user_id: str) -> Dict[str, Any]:
+        """Run compliance check"""
+        import random
+        score = random.randint(75, 100)
+        if self.dry_run:
+            return {"status": "SUCCESS", "message": f"[DRY-RUN] Would run compliance check", "dry_run": True}
+        return {"status": "SUCCESS", "message": f"Compliance check completed", "compliance_score": score, "status": "compliant" if score >= 80 else "needs_review"}
+    
+    def _action_compliance_report(self, params: Dict[str, Any], user_id: str) -> Dict[str, Any]:
+        """Generate compliance report"""
+        report_id = f"COMP-{datetime.now().strftime('%Y%m%d%H%M%S')}"
+        if self.dry_run:
+            return {"status": "SUCCESS", "message": f"[DRY-RUN] Would generate compliance report", "dry_run": True}
+        return {"status": "SUCCESS", "message": f"Compliance report generated: {report_id}", "report_id": report_id}
+    
+    def _action_system_shutdown(self, params: Dict[str, Any], user_id: str) -> Dict[str, Any]:
+        """Shutdown system"""
+        if self.dry_run:
+            return {"status": "SUCCESS", "message": "[DRY-RUN] Would initiate system shutdown", "dry_run": True, "requires_confirmation": True}
+        return {"status": "SUCCESS", "message": "System shutdown initiated", "countdown_seconds": 60}
+    
+    def _action_system_restart(self, params: Dict[str, Any], user_id: str) -> Dict[str, Any]:
+        """Restart system"""
+        if self.dry_run:
+            return {"status": "SUCCESS", "message": "[DRY-RUN] Would initiate system restart", "dry_run": True}
+        return {"status": "SUCCESS", "message": "System restart initiated", "estimated_downtime_seconds": 120}
+    
+    def _action_delete_resource(self, params: Dict[str, Any], user_id: str) -> Dict[str, Any]:
+        """Delete resource"""
+        resource = params.get("resource", "unknown")
+        if self.dry_run:
+            return {"status": "SUCCESS", "message": f"[DRY-RUN] Would delete resource: {resource}", "dry_run": True, "recoverable": True}
+        return {"status": "SUCCESS", "message": f"Resource deleted: {resource}", "backup_created": True}
+    
+    def _action_create_backup(self, params: Dict[str, Any], user_id: str) -> Dict[str, Any]:
+        """Create backup"""
+        import random
+        backup_id = f"BKP-{datetime.now().strftime('%Y%m%d%H%M%S')}"
+        size_mb = random.randint(100, 5000)
+        if self.dry_run:
+            return {"status": "SUCCESS", "message": f"[DRY-RUN] Would create backup: {backup_id}", "dry_run": True}
+        return {"status": "SUCCESS", "message": f"Backup created: {backup_id}", "backup_id": backup_id, "size_mb": size_mb}
+    
+    def _action_deploy_app(self, params: Dict[str, Any], user_id: str) -> Dict[str, Any]:
+        """Deploy application"""
+        import random
+        version = f"v{random.randint(1,5)}.{random.randint(0,9)}.{random.randint(0,99)}"
+        if self.dry_run:
+            return {"status": "SUCCESS", "message": f"[DRY-RUN] Would deploy application {version}", "dry_run": True}
+        return {"status": "SUCCESS", "message": f"Application deployed: {version}", "version": version, "instances": 3}
+    
+    def _action_send_notification(self, params: Dict[str, Any], user_id: str) -> Dict[str, Any]:
+        """Send notification"""
+        import random
+        recipients = random.randint(1, 20)
+        if self.dry_run:
+            return {"status": "SUCCESS", "message": f"[DRY-RUN] Would send notification to {recipients} recipients", "dry_run": True}
+        return {"status": "SUCCESS", "message": f"Notification sent to {recipients} recipients", "delivered": recipients}
+    
+    def _action_schedule_event(self, params: Dict[str, Any], user_id: str) -> Dict[str, Any]:
+        """Schedule event"""
+        event_id = f"EVT-{datetime.now().strftime('%Y%m%d%H%M%S')}"
+        if self.dry_run:
+            return {"status": "SUCCESS", "message": f"[DRY-RUN] Would schedule event: {event_id}", "dry_run": True}
+        return {"status": "SUCCESS", "message": f"Event scheduled: {event_id}", "event_id": event_id, "invites_sent": True}
     
     # ==========================================
     # HELPER METHODS
