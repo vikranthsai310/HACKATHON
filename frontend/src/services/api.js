@@ -191,6 +191,15 @@ export const decisionAPI = {
       }),
     })
       .then(response => {
+        if (!response.ok) {
+          response.json().then(errData => {
+            onError?.(new Error(errData.detail || `HTTP ${response.status}`));
+          }).catch(() => {
+            onError?.(new Error(`HTTP ${response.status}`));
+          });
+          return;
+        }
+        
         const reader = response.body.getReader();
         const decoder = new TextDecoder();
         
@@ -210,18 +219,21 @@ export const decisionAPI = {
                   const data = JSON.parse(line.slice(6));
                   onEvent?.(data);
                 } catch (e) {
-                  // Ignore parse errors
+                  console.error('Parse error:', e, 'Line:', line);
                 }
               }
             }
             
             read();
+          }).catch(readErr => {
+            onError?.(readErr);
           });
         }
         
         read();
       })
       .catch(error => {
+        console.error('Fetch error:', error);
         onError?.(error);
       });
   },

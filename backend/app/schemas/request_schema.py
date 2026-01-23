@@ -62,7 +62,7 @@ class UserRequest(BaseModel):
     """Schema for incoming user requests"""
     request_id: str = Field(default_factory=lambda: str(uuid.uuid4()), description="Unique request identifier")
     user_id: str = Field(..., description="User identifier")
-    timestamp: datetime = Field(default_factory=datetime.now, description="Request timestamp")
+    timestamp: str = Field(default_factory=lambda: datetime.now().isoformat(), description="Request timestamp")
     message: str = Field(..., min_length=1, description="Natural language message from user")
     context: Optional[RequestContext] = Field(default=None, description="Additional context")
 
@@ -196,7 +196,7 @@ class CompletedAction(BaseModel):
     action: str = Field(..., description="Action name")
     status: str = Field(..., description="Action status")
     result: Dict[str, Any] = Field(default_factory=dict, description="Action result")
-    timestamp: datetime = Field(default_factory=datetime.now, description="Completion timestamp")
+    timestamp: str = Field(default_factory=lambda: datetime.now().isoformat(), description="Completion timestamp")
 
 
 class DecisionOutput(BaseModel):
@@ -209,7 +209,7 @@ class DecisionOutput(BaseModel):
     explanation: str = Field(..., description="Detailed explanation of decision")
     confidence: float = Field(default=1.0, ge=0.0, le=1.0, description="Decision confidence")
     audit_trail: Dict[str, Any] = Field(default_factory=dict, description="Audit information")
-    timestamp: datetime = Field(default_factory=datetime.now, description="Decision timestamp")
+    timestamp: str = Field(default_factory=lambda: datetime.now().isoformat(), description="Decision timestamp")
 
 
 # ============================================
@@ -221,7 +221,7 @@ class AuditLogEntry(BaseModel):
     log_id: str = Field(default_factory=lambda: str(uuid.uuid4()), description="Unique log identifier")
     request_id: str = Field(..., description="Related request ID")
     decision_id: Optional[str] = Field(default=None, description="Related decision ID")
-    timestamp: datetime = Field(default_factory=datetime.now, description="Log timestamp")
+    timestamp: str = Field(default_factory=lambda: datetime.now().isoformat(), description="Log timestamp")
     event_type: str = Field(..., description="Type of event")
     actor: str = Field(..., description="User or system that triggered the event")
     action: str = Field(..., description="Action performed")

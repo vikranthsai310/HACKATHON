@@ -706,7 +706,7 @@ class ActionExecutor:
         audit_entry = AuditLogEntry(
             request_id=request_id,
             decision_id=decision_id,
-            timestamp=datetime.now(),
+            timestamp=datetime.now().isoformat(),
             event_type=event_type,
             actor=actor,
             action=action,

@@ -44,17 +44,7 @@ function ChatBot() {
       type: 'system',
       content: `Welcome to the HRM Decision System! 👋
 
-I'm your AI assistant powered by a Hierarchical Reasoning Model. I can help you with:
-
-• **Security Operations** - Block IPs, manage threats
-• **Access Control** - Grant/revoke permissions
-• **System Queries** - Fetch logs, generate reports
-• **Compliance** - Audit reports, policy checks
-
-Try asking something like:
-- "Block suspicious IP 192.168.1.100"
-- "Grant John access to the dashboard"
-- "Show me the security logs from today"`,
+I'm powered by Gemini LLM and Hierarchical Reasoning Model (HRM). Ask me anything and I'll process your request using advanced AI reasoning.`,
       timestamp: new Date().toISOString(),
     };
     
@@ -110,9 +100,18 @@ Try asking something like:
         },
         // On error
         (err) => {
-          setError(err.message);
+          console.error('Stream error:', err);
+          const errorMsg = err.message || 'Failed to process request';
+          setError(errorMsg);
           setIsLoading(false);
           setIsStreaming(false);
+          
+          // Add error message to chat
+          addMessage({
+            type: 'error',
+            content: `Error: ${errorMsg}`,
+            timestamp: new Date().toISOString(),
+          });
         },
         // On complete
         () => {
@@ -147,13 +146,6 @@ Try asking something like:
         timestamp: new Date().toISOString(),
       });
     }
-  };
-  
-  /**
-   * Handle quick action button clicks
-   */
-  const handleQuickAction = (action) => {
-    handleSendMessage(action);
   };
   
   /**
@@ -223,38 +215,13 @@ Try asking something like:
       <div className="chatbot-header">
         <div className="header-left">
           <span className="status-indicator online"></span>
-          <span className="status-text">System Online</span>
+          <span className="status-text">Gemini LLM + HRM Active</span>
         </div>
         <div className="header-right">
-          <select 
-            className="role-selector"
-            value={userRole}
-            onChange={(e) => setUserRole(e.target.value)}
-          >
-            <option value="admin">Admin</option>
-            <option value="security_analyst">Security Analyst</option>
-            <option value="user">User</option>
-          </select>
           <button className="clear-btn" onClick={handleClearChat} title="Clear chat">
-            🗑️
+            🗑️ Clear
           </button>
         </div>
-      </div>
-      
-      {/* Quick actions */}
-      <div className="quick-actions">
-        <button onClick={() => handleQuickAction('Block IP 192.168.1.100')}>
-          🛡️ Block IP
-        </button>
-        <button onClick={() => handleQuickAction('Show security logs')}>
-          📋 View Logs
-        </button>
-        <button onClick={() => handleQuickAction('Grant access to dashboard')}>
-          🔑 Grant Access
-        </button>
-        <button onClick={() => handleQuickAction('Generate audit report')}>
-          📊 Audit Report
-        </button>
       </div>
       
       {/* Messages container */}

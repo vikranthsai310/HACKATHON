@@ -253,8 +253,13 @@ class EnhancedLLMInterpreter:
     
     def __init__(self, config: Optional[LLMConfig] = None):
         """Initialize the enhanced LLM interpreter"""
+        # Import settings here to avoid circular imports
+        from ..config import settings
+        
         self.config = config or LLMConfig()
-        self.config.api_key = self.config.api_key or os.getenv("GEMINI_API_KEY")
+        # Try config first, then settings, then environment variable
+        self.config.api_key = self.config.api_key or settings.GEMINI_API_KEY or os.getenv("GEMINI_API_KEY")
+        self.config.model_name = self.config.model_name or settings.GEMINI_MODEL
         
         self.cache = ResponseCache(ttl=self.config.cache_ttl)
         self.parser = LLMResponseParser()
@@ -264,7 +269,10 @@ class EnhancedLLMInterpreter:
         self.use_mock = not GEMINI_AVAILABLE or not self.config.api_key
         
         if self.use_mock:
-            logger.warning("Enhanced LLM running in MOCK mode")
+            if not GEMINI_AVAILABLE:
+                logger.warning("Enhanced LLM running in MOCK mode - google-generativeai not installed")
+            else:
+                logger.warning("Enhanced LLM running in MOCK mode - no API key provided")
         else:
             try:
                 genai.configure(api_key=self.config.api_key)
@@ -275,7 +283,7 @@ class EnhancedLLMInterpreter:
                         "max_output_tokens": self.config.max_tokens,
                     }
                 )
-                logger.info(f"Enhanced LLM initialized with {self.config.model_name}")
+                logger.info(f"✓ Enhanced LLM initialized with {self.config.model_name} and real Gemini API")
             except Exception as e:
                 logger.error(f"Failed to initialize Gemini: {e}")
                 self.use_mock = True

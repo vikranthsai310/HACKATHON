@@ -245,7 +245,7 @@ class HRMEngine:
                         "subsystem": tactical_plan["target_subsystem"],
                         "details": f"Action {action.action} completed successfully"
                     },
-                    timestamp=datetime.now()
+                    timestamp=datetime.now().isoformat()
                 )
             else:
                 # Use fallback action
@@ -257,7 +257,7 @@ class HRMEngine:
                         "reason": "Pre-conditions not met",
                         "fallback_used": action.fallback
                     },
-                    timestamp=datetime.now()
+                    timestamp=datetime.now().isoformat()
                 )
             
             completed_actions.append(completed_action)
@@ -378,7 +378,7 @@ class HRMEngine:
             explanation=explanation,
             confidence=confidence,
             audit_trail=audit_trail,
-            timestamp=datetime.now()
+            timestamp=datetime.now().isoformat()
         )
     
     def _build_explanation(
@@ -426,7 +426,7 @@ class HRMEngine:
                 "strategic_goal": hrm_input.L1_strategic.goal,
                 "risk_level": hrm_input.L1_strategic.risk_level.value
             },
-            timestamp=datetime.now()
+            timestamp=datetime.now().isoformat()
         )
     
     def _encode_hrm_input(self, hrm_input: HRMInput) -> Dict[str, Any]:

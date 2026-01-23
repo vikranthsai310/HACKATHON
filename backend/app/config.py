@@ -3,8 +3,9 @@ Configuration settings for HRM Decision System
 """
 
 import os
-from typing import Optional
+from typing import Optional, List
 from pydantic_settings import BaseSettings
+from pydantic import field_validator
 
 
 class Settings(BaseSettings):
@@ -35,13 +36,21 @@ class Settings(BaseSettings):
     LOG_FORMAT: str = "standard"
     
     # CORS Configuration
-    CORS_ORIGINS: list = ["http://localhost:3000", "http://localhost:5173"]
+    CORS_ORIGINS: List[str] = ["http://localhost:3000", "http://localhost:5173"]
     CORS_ALLOW_CREDENTIALS: bool = True
     
     # Security
     SECRET_KEY: str = "your-secret-key-change-in-production"
     ALGORITHM: str = "HS256"
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 30
+    
+    @field_validator('CORS_ORIGINS', mode='before')
+    @classmethod
+    def parse_cors_origins(cls, v):
+        """Parse CORS origins from string or list"""
+        if isinstance(v, str):
+            return [origin.strip() for origin in v.split(',')]
+        return v
     
     class Config:
         env_file = ".env"
