@@ -112,16 +112,14 @@ class Attention(nn.Module):
     def forward(self, cos_sin: CosSin, hidden_states: torch.Tensor) -> torch.Tensor:
         batch_size, seq_len, _ = hidden_states.shape
 
-        # hidden_states: [bs, seq_len, num_heads, head_dim]
+      
         qkv = self.qkv_proj(hidden_states)
-
-        # Split head
         qkv = qkv.view(batch_size, seq_len, self.num_heads + 2 * self.num_key_value_heads, self.head_dim)
         query = qkv[:, :, :self.num_heads]
         key = qkv[:, :, self.num_heads: self.num_heads + self.num_key_value_heads]
         value = qkv[:, :, self.num_heads + self.num_key_value_heads:]
 
-        # RoPE
+     # RoPE
         if cos_sin is not None:
             cos, sin = cos_sin
             query, key = apply_rotary_pos_emb(query, key, cos, sin)
